@@ -1,0 +1,36 @@
+apply plugin: 'scala'
+
+akkaVersion = "1.1-M1"
+scalaVersion = "2.9.0.RC1"
+
+// Project configuration is used for Maven deploy:
+version = '1.0-SNAPSHOT'
+group = 'dk.tdc.businesscore'
+
+repositories {
+    
+    mavenRepo urls: "http://akka.io/repository/"
+    mavenCentral()
+  }
+
+akkaLibraries = ["se.scalablesolutions.akka:akka-actor:$akkaVersion",
+          "se.scalablesolutions.akka:akka-typed-actor:$akkaVersion",
+          "se.scalablesolutions.akka:akka-http:$akkaVersion@jar",
+		  "se.scalablesolutions.akka:akka-remote:$akkaVersion@jar",
+		  "org.scala-lang:scala-library:$scalaVersion"
+  ]
+
+dependencies {
+  
+  // Libraries needed to run the scala tools
+  scalaTools "org.scala-lang:scala-compiler:$scalaVersion"
+  scalaTools "org.scala-lang:scala-library:$scalaVersion"
+
+  // Libraries needed for scala api
+  compile "org.scala-lang:scala-library:$scalaVersion"
+  compile akkaLibraries
+  compile 'javax.servlet:servlet-api:2.5'
+  
+
+  
+}
