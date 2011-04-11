@@ -1,0 +1,6 @@
+AKKA 1.1 Init Servlet
+=====================
+
+Akka 1.1 no longer contains an Akka server initialization servlet in the "remote" package.
+
+..
