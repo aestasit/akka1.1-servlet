@@ -5,7 +5,7 @@ scalaVersion = "2.9.0.RC1"
 
 // Project configuration is used for Maven deploy:
 version = '1.0-SNAPSHOT'
-group = 'dk.tdc.businesscore'
+group = 'com.aestasit'
 
 repositories {
     
